@@ -58,9 +58,8 @@ function food () {
             . # . # .
             . # . # .
             `)
-    } else if (hangry <= 6) {
-        hungry_b()
     }
+    hungry_b()
 }
 function hangry_a () {
     basic.showString("Hungry")
@@ -81,7 +80,7 @@ function hungry_b () {
     basic.showString("Thanks for feeding me")
 }
 function emotions () {
-    if (emotion == 0) {
+    if (emotion <= 0) {
         dying()
     } else if (emotion == 1) {
         basic.showLeds(`
