@@ -230,15 +230,16 @@ function start () {
         `)
     basic.showString("Hello World")
 }
-let pet_speciality = 0
 let death = false
 let lastInteraction = 0
+let pet_speciality = 0
 let score = 0
 let hangry = 0
 let emotion = 0
 emotion = 3
 hangry = 0
 score = 0
+pet_speciality = 0
 start()
 pet_rarity()
 instructions()
