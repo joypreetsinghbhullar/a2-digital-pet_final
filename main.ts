@@ -142,7 +142,7 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     lastInteraction = input.runningTime()
     death = false
-    hangry += 1
+    hangry += -1
     hangry = randint(0, 5)
     if (death == false) {
         hangry_a()
