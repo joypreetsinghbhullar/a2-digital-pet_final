@@ -1,7 +1,7 @@
 function instructions () {
-    basic.showString("on button A, emotions are shown")
-    basic.showString("On button b, it will show playing")
-    basic.showString("On shake, it will be hangry")
+    basic.showString("on button A, emotions are shown",50)
+basic.showString("On button b, it will show playing", 50)
+basic.showString("On shake, it will be hangry", 50)
 }
 function food () {
     if (hangry == 0) {
