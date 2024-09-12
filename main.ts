@@ -226,16 +226,16 @@ let emotion = 0
 emotion = 3
 hangry = 0
 score = 0
-instructions()
 start()
 pet_rarity()
-loops.everyInterval(500, function () {
-    hangry += 1
-    emotion += 1
-})
+instructions()
 basic.forever(function () {
     // Check if 15 minutes (900,000 milliseconds) have passed since the last interaction
     if (input.runningTime() - lastInteraction > 90000) {
         death = true
     }
+})
+loops.everyInterval(30000, function () {
+    hangry += 1
+    emotion += -1
 })
