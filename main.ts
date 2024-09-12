@@ -60,6 +60,12 @@ function food () {
             `)
     }
 }
+function hangry_a () {
+    basic.showString("Hungry")
+    basic.showIcon(IconNames.Sad)
+    basic.showString("I am hungry give me food ")
+    basic.showIcon(IconNames.Angry)
+}
 // Update lastInteraction on button presses
 input.onButtonPressed(Button.A, function () {
     lastInteraction = input.runningTime()
@@ -133,6 +139,7 @@ input.onGesture(Gesture.Shake, function () {
     hangry += 1
     hangry = randint(0, 5)
     if (death == false) {
+        hangry_a()
         food()
     }
 })
