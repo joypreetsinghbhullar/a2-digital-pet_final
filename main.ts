@@ -58,6 +58,8 @@ function food () {
             . # . # .
             . # . # .
             `)
+    } else if (hangry <= 6) {
+        hungry_b()
     }
 }
 function hangry_a () {
@@ -73,6 +75,11 @@ input.onButtonPressed(Button.A, function () {
     emotion += 1
     emotions()
 })
+function hungry_b () {
+    basic.showString("I am full now")
+    basic.showIcon(IconNames.Happy)
+    basic.showString("Thanks for feeding me")
+}
 function emotions () {
     if (emotion == 0) {
         dying()
