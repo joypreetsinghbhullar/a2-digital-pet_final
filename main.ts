@@ -245,7 +245,7 @@ pet_rarity()
 instructions()
 basic.forever(function () {
     // Check if 15 minutes (900,000 milliseconds) have passed since the last interaction
-    if (input.runningTime() - lastInteraction > 90000) {
+    if (input.runningTime() - lastInteraction > 60000) {
         death = true
     }
 })
