@@ -134,6 +134,11 @@ function dying () {
     basic.showIcon(IconNames.Skull)
     control.reset()
 }
+function death_1 () {
+    if (true) {
+        dying()
+    }
+}
 input.onButtonPressed(Button.B, function () {
     lastInteraction = input.runningTime()
     death = false
@@ -247,7 +252,6 @@ basic.forever(function () {
     // Check if 15 minutes (900,000 milliseconds) have passed since the last interaction
     if (input.runningTime() - lastInteraction > 60000) {
         death = true
-        dying()
     }
 })
 loops.everyInterval(30000, function () {
