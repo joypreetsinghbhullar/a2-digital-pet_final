@@ -70,7 +70,7 @@ input.onButtonPressed(Button.A, function () {
 function emotions () {
     if (emotion == 0) {
         dying()
-    } else if (emotion == 0) {
+    } else if (emotion == 1) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -78,11 +78,11 @@ function emotions () {
             . # # # .
             . . . . .
             `)
-    } else if (emotion == 0) {
+    } else if (emotion == 2) {
         basic.showIcon(IconNames.Meh)
-    } else if (emotion == 0) {
+    } else if (emotion == 3) {
         basic.showIcon(IconNames.Asleep)
-    } else if (emotion == 0) {
+    } else if (emotion == 4) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -90,7 +90,7 @@ function emotions () {
             # # # # #
             # . # . #
             `)
-    } else if (emotion == 0) {
+    } else if (emotion == 5) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -98,7 +98,7 @@ function emotions () {
             . # # # .
             # . . . #
             `)
-    } else if (emotion == 0) {
+    } else if (emotion == 6) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -229,6 +229,10 @@ score = 0
 instructions()
 start()
 pet_rarity()
+loops.everyInterval(500, function () {
+    hangry += 1
+    emotion += 1
+})
 basic.forever(function () {
     // Check if 15 minutes (900,000 milliseconds) have passed since the last interaction
     if (input.runningTime() - lastInteraction > 90000) {
