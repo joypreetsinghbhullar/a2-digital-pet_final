@@ -69,21 +69,43 @@ input.onButtonPressed(Button.A, function () {
 })
 function emotions () {
     if (emotion == 0) {
-    	
+        dying()
     } else if (emotion == 0) {
-    	
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            . . . . .
+            `)
     } else if (emotion == 0) {
-    	
+        basic.showIcon(IconNames.Meh)
     } else if (emotion == 0) {
-    	
+        basic.showIcon(IconNames.Asleep)
     } else if (emotion == 0) {
-    	
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # # # # #
+            # . # . #
+            `)
     } else if (emotion == 0) {
-    	
-    } else if (false) {
-    	
-    } else {
-    	
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    } else if (emotion == 0) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
     }
 }
 function dying () {
